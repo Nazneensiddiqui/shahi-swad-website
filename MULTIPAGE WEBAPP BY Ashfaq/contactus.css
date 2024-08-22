@@ -1,0 +1,170 @@
+@import "header.css";
+@import "footer.css";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+}
+
+.contact_main {
+  top: 170px;
+  position: relative;
+  height: 600px;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 200px;
+}
+.contact_main .heading {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  font-family: Lato, sans-serif;
+  color: #212121;
+  margin-left: 45px;
+}
+.contact_main .heading h2 {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  margin-left: 50px;
+}
+.contact_main .cover {
+  /* margin-top: 60px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.12);
+}
+.contact_main .cover .form {
+  height: 400px;
+  width: 50%;
+  margin-left: 100px;
+}
+.contact_main .cover .form .name {
+  height: 50px;
+  width: 75%;
+  border: 3px solid rgb(193, 141, 141);
+  padding: 20px;
+}
+.contact_main .cover .form .mobile {
+  margin-top: 20px;
+  height: 55px;
+  width: 75%;
+  padding: 20px;
+  border: 3px solid rgb(193, 141, 141);
+}
+.contact_main .cover .form .email {
+  margin-top: 20px;
+  height: 50px;
+  width: 75%;
+  border: 3px solid rgb(193, 141, 141);
+  padding: 20px;
+}
+.contact_main .cover .form .message {
+  margin-top: 20px;
+  height: 110px;
+  width: 75%;
+  border: 3px solid rgb(193, 141, 141);
+  margin-bottom: 30px;
+  padding: 20px;
+}
+.contact_main .cover .form .btn {
+  height: 40px;
+  width: 100px;
+  background-color: rgb(122, 182, 48);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact_main .cover .form .btn a {
+  text-decoration: none;
+  color: white;
+}
+.contact_main .cover .form .btn:hover {
+  border: 1px solid black;
+  background-color: transparent;
+}
+.contact_main .cover .form .btn:hover a {
+  color: black;
+}
+.contact_main .map {
+  margin-right: 100px;
+}
+
+.instagram {
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.instagram h3 {
+  text-align: center;
+}
+.instagram h3 a {
+  color: black;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .contact_main {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .contact_main .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 141px;
+    margin-left: none;
+    margin-top: none;
+  }
+  .contact_main .heading h1 {
+    text-align: center;
+  }
+  .contact_main .cover {
+    height: auto;
+    width: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .contact_main .cover .form {
+    margin: 100px;
+  }
+  .contact_main .cover .form form input {
+    width: 1300px;
+  }
+  .contact_main .cover .map {
+    margin-left: 110px;
+  }
+}
+@media screen and (max-width: 426px) {
+  .contact_main .heading {
+    margin-bottom: 40px;
+  }
+  .contact_main .heading h2 {
+    font-size: larger;
+  }
+  .contact_main .cover .form name {
+    width: 350px;
+  }
+  .map {
+    width: auto;
+    padding: 40px;
+  }
+  .map .map_div {
+    width: auto;
+    padding: 40px;
+  }
+  .map .map_div iframe {
+    width: auto;
+  }
+}/*# sourceMappingURL=contactus.css.map */

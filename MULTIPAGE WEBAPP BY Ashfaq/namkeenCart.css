@@ -1,0 +1,178 @@
+@import "header.css";
+@import "footer.css";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+}
+
+.heading {
+  position: relative;
+  top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.heading h1 {
+  margin-top: 50px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.heading img {
+  margin-top: 3px;
+  width: 250px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+  width: 100%;
+  margin-top: 170px;
+  background-color: white;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+}
+.main .photos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.main .photos .bigphoto img {
+  height: 660px;
+  width: 100%;
+}
+.main .infobox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(245, 245, 81, 0.3);
+  padding: 20px;
+  border-radius: 20px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  height: 90%;
+  width: 40%;
+}
+.main .infobox .itemdetail {
+  text-align: center;
+}
+.main .infobox .itemdetail h1 {
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+.main .infobox .itemdetail p {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.main .infobox .weight h4 {
+  font-weight: 550;
+  margin-bottom: 10px;
+}
+.main .infobox .quantity {
+  display: flex;
+  gap: 3px;
+}
+.main .infobox .quantity h5 {
+  font-weight: 600;
+  margin-right: 8px;
+}
+.main .infobox .quantity .cbox {
+  border: 1px solid black;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  gap: 1px;
+}
+.main .infobox .quantity .cbox placeholder {
+  font-weight: 600;
+}
+.main .infobox .button {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 400px;
+  background-color: rgb(122, 182, 48);
+  border-radius: 50px;
+  margin-bottom: 30px;
+}
+.main .infobox .button a {
+  text-decoration: none;
+  color: white;
+}
+.main .infobox .button:hover {
+  color: rgb(255, 255, 255);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  background-color: rgba(177, 207, 78, 0.942);
+  border: 2px solid rgb(122, 182, 48);
+}
+.main .infobox .description #heading {
+  font-size: 23px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.main .infobox .description p {
+  text-align: start;
+  font-weight: 600;
+}
+.main .infobox .description #iteminfo {
+  font-family: cursive;
+}
+
+.instagram {
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.instagram h3 {
+  text-align: center;
+  color: black;
+}
+
+@media screen and (max-width: 768px) {
+  .heading h1 {
+    font-size: larger;
+  }
+  .main {
+    margin-top: 100px;
+  }
+  .main .infobox .itemdetail h1 {
+    font-size: x-large;
+  }
+  .main .infobox .button {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 426px) {
+  .main {
+    flex-direction: column;
+    height: auto;
+    width: auto;
+  }
+  .main .photos {
+    margin-top: 30px;
+    padding: 20px;
+  }
+  .main .photos .bigphoto img {
+    height: auto;
+    border-radius: 20px;
+  }
+  .main .infobox {
+    width: 100%;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid;
+  }
+}/*# sourceMappingURL=namkeenCart.css.map */

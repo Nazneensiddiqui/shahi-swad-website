@@ -1,0 +1,99 @@
+@import "header.css";
+@import "footer.css";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+}
+
+.orderconfirmed {
+  position: relative;
+  top: 200px;
+  margin-bottom: 300px;
+  height: 500px;
+  width: 100%;
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url(/image/orderconfirmed.jpg) no-repeat center center/cover;
+}
+.orderconfirmed .cover {
+  height: 400px;
+  width: 700px;
+  border-radius: 50px;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  display: flex;
+  gap: 20px;
+  color: white;
+  border: 2px solid rgb(202, 173, 173);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.orderconfirmed .cover .thankyou {
+  width: 150px;
+  height: 50px;
+  background-color: rgb(122, 182, 48);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  border: 2px solid white;
+}
+.orderconfirmed .cover .thankyou a {
+  text-decoration: none;
+  color: black;
+}
+.orderconfirmed .cover .thankyou:hover {
+  background-color: white;
+  cursor: pointer;
+  border-color: black;
+}
+.orderconfirmed .cover .thankyou:hover a {
+  color: black;
+}
+
+.instagram {
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.instagram h3 {
+  text-align: center;
+}
+.instagram h3 a {
+  color: black;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .orderconfirmed {
+    width: auto;
+    height: auto;
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 426px) {
+  .orderconfirmed {
+    width: auto;
+    height: auto;
+    padding: 10px;
+  }
+  .orderconfirmed .cover {
+    width: auto;
+    height: auto;
+    padding: 30px;
+  }
+  .orderconfirmed .cover h1 {
+    font-size: larger;
+  }
+}/*# sourceMappingURL=OrderConfirmed.css.map */

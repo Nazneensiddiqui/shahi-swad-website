@@ -1,0 +1,372 @@
+//mixings
+@import "variables";
+@import "mixing";
+@import "header.css";
+@import "footer.css";
+
+* {
+  @include defaultcss();
+}
+
+// hero secion css starts from here .
+.hero {
+  background: url(ladddo\ image.webp) no-repeat center center/cover;
+  height: 100vh;
+  @include flexprop();
+  flex-direction: column;
+  .hero-text {
+    @include flexprop();
+    flex-direction: column;
+  }
+  .hero-text h2 {
+    font-size: 46px;
+    color: #fff;
+    margin-bottom: 15px;
+  }
+}
+
+// universal button
+.btn {
+  margin-top: 10px;
+  padding: 8px;
+  background-color: #fff;
+  border: none;
+  border-radius: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid wheat;
+}
+
+.btn a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  text-transform: uppercase;
+  // padding: 0 20px;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background-color: transparent;
+  border: 1px solid wheat;
+}
+
+//   first section
+.first-section {
+  height: 1069px;
+  // background-color: $backgroundcolor;
+  // box-shadow: $boxshado;
+ 
+  h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 20px;
+    padding: 20px;
+
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    color: $heading-color;
+    text-transform: capitalize;
+  }
+  .fs-cover {
+    @include gridprop();
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    height:auto;
+    width: 100%;
+    background-color:#ffe298;
+    .image {
+      display: flex;
+      flex-direction: column;
+    }
+    .image img {
+     
+      height: 400px;
+      width: 450px;
+      transition: all 4s ease;
+      &:hover {
+        transform: scale(0.8);
+        overflow:scroll;
+      }
+    }
+    .image a {
+      text-align: center;
+      text-decoration: none;
+      color: black;
+      text-transform: capitalize;
+      font-weight: 700;
+      margin: 20px;
+    }
+  }
+}
+
+//---------- SECOND SECTION ---------
+
+.second-section {
+  background-color: $backgroundcolor;
+  box-shadow: $boxshado;
+  width: 100%;
+
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+
+    text-align: center;
+
+    color: $heading-color;
+  }
+  .s-cover {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin: 14px;
+    .image {
+      height: 560px;
+      width: 300px;
+      background-color: #ffe298;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      img {
+        height: 500px;
+        width: 300px;
+        // border-radius: 20px;
+      }
+      &:hover {
+        padding: 10px;
+        cursor: pointer;
+      }
+      a {
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        text-transform: capitalize;
+        font-weight: 700;
+        margin: 20px;
+      }
+    }
+  }
+}
+
+// third section
+.third-section {
+  @include flexprop();
+  margin-top: 60px;
+  height: 500px;
+  width: 100%;
+  gap: 10px;
+  .image-1 {
+    background: url(s-02\ legacy.webp) no-repeat center center/cover;
+    height: 100%;
+    width: 50%;
+    .text-1 {
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      flex-direction: column;
+      margin-top: 150px;
+      margin-left: 50px;
+      h3 {
+        letter-spacing: 5px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      h1 {
+        font-size: 40px;
+        letter-spacing: 5px;
+      }
+    }
+  }
+  .L-btn {
+    background-color: white;
+    height: 50px;
+    width: 150px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border: 1px solid green;
+    &:hover {
+      border: 1px solid black;
+
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      text-transform: uppercase;
+    }
+  }
+
+  .image-2 {
+    background: url(s-03\ rakhi.webp) no-repeat center center/cover;
+    height: 100%;
+    width: 50%;
+    .text-2 {
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      flex-direction: column;
+      margin-top: 150px;
+      margin-left: 50px;
+      h3 {
+        letter-spacing: 5px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+      }
+      h1 {
+        font-size: 40px;
+        letter-spacing: 5px;
+      }
+    }
+  }
+}
+
+
+
+
+
+  
+  
+
+
+
+// --------Tablet scss ------
+@media screen and (max-width: 768px) {
+ 
+ 
+
+
+  .hero{
+    width: auto;
+   
+  }
+  .first-section{
+    height: auto;
+    width: auto;
+    .fs-cover{
+      grid-template-columns: 1fr 1fr;
+      width: auto;
+      .image{
+        img{
+          height: 350px;
+          width: 350px;
+        }
+      }
+    }
+  }
+  .second-section{
+    height: auto;
+    width: auto;
+    margin-top: 70px;
+    .s-cover{
+      display: grid;
+   
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    margin-top: 50px;
+    }
+  }
+  .third-section{
+    width: auto;
+    height: auto;
+    margin: 20px;
+  }
+
+   
+
+}
+// ------- MOBILE-MEDIA-QUERY ---------
+@media screen and (max-width: 426px) {
+
+  
+  
+
+  .hero{
+    width: auto ;
+    .hero-text{
+      h2{
+        font-size: 25px;
+      }
+    }
+   
+  }
+  .first-section{
+       h2{
+        font-size: 18px;
+       }
+      .fs-cover{
+        grid-template-columns: 1fr;
+        width: auto;
+        .image{
+          margin-top: 20px;
+        }
+      }
+  }
+
+  .second-section{
+    .s-cover{
+      grid-template-columns: 1fr;
+    }
+  }
+  .third-section{
+    flex-direction: column;
+
+    width: auto;
+    height: auto;
+
+    
+      .image-1{
+        
+        width: 390px;
+        height:  390px;
+        .text-1{
+          h3{
+            font-size: 15px;
+            font-weight: 700;
+          }
+          h1{
+            font-size: 20px;
+          }
+          .L-btn{
+            height: 49px;
+    width: 114px;
+          }
+        }
+      }
+
+
+      .image-2{
+        
+        width: 390px;
+        height:  390px;
+        .text-2{
+          h3{
+            font-size: 15px;
+            font-weight: 700;
+          }
+          h1{
+            font-size: 20px;
+          }
+          .L-btn{
+            height: 49px;
+    width: 114px;
+          }
+        }
+      }
+    
+  }
+
+  .newsletter{
+    h2{
+      font-size: 15px;
+    }
+  }
+  
+
+
+}

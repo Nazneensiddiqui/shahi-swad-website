@@ -1,0 +1,199 @@
+//mixings
+@import "variables";
+@import "mixing";
+@import "header.css";
+@import "footer.css";
+
+* {
+  @include defaultcss();
+}
+
+// -------cart starts here
+.heading {
+  
+ position:relative;
+ top: 100px;
+  @include flexprop();
+  flex-direction: column;
+  h1 {
+    margin-top: 50px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  img {
+    margin-top: 3px;
+    width: 250px;
+  }
+}
+.main {
+  @include flexprop();
+  height: 800px;
+  width: 100%;
+   margin-top: 170px;
+  background-color: white;
+  box-shadow: $boxshado;
+  
+
+  .photos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+   
+    .bigphoto {
+      img {
+        height: 660px;
+        width: 100%;
+      }
+    }
+    
+  }
+
+  .infobox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(245, 245, 81, 0.3);
+    padding: 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    height: 90%;
+
+    width: 40%;
+    .itemdetail {
+      text-align: center;
+      h1 {
+        font-weight: 600;
+        letter-spacing: 3px;
+        margin-bottom: 10px;
+      }
+      p {
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+    }
+    .weight {
+      h4 {
+        font-weight: 550;
+        margin-bottom: 10px;
+      }
+    }
+    .quantity {
+      display: flex;
+      gap: 3px;
+      h5 {
+        font-weight: 600;
+        margin-right: 8px;
+      }
+      .cbox {
+        border: 1px solid black;
+        width: 20px;
+        @include flexprop();
+        cursor: pointer;
+        gap: 1px;
+        placeholder {
+          font-weight: 600;
+        }
+      }
+    }
+    .button {
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
+      width: 400px;
+      background-color: $heading-color;
+
+      border-radius: 50px;
+      margin-bottom: 30px;
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      &:hover {
+        color: $backgroundcolor;
+        box-shadow: $boxshado;
+        background-color: rgba(177, 207, 78, 0.942);
+        border: 2px solid $heading-color;
+      }
+    }
+    .description {
+      #heading {
+        font-size: 23px;
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+      p {
+        text-align: start;
+        font-weight: 600;
+      }
+      #iteminfo {
+        font-family: cursive;
+      }
+    }
+  }
+}
+.instagram {
+  margin: 30px;
+
+  @include flexprop();
+  flex-direction: column;
+  h3 {
+    text-align: center;
+    color: black;
+  }
+}
+
+
+
+@media screen and (max-width:768px) {
+  .heading{
+    h1{
+      font-size: larger;
+    }
+  }
+  .main{
+    margin-top: 100px;
+    .infobox{
+      .itemdetail{
+        h1{
+        font-size: x-large;
+        }
+      }
+      .button{
+        width: 200px;
+      }
+    }
+  
+  }
+  
+}
+
+@media screen and (max-width:426px) {
+
+  .main{
+    flex-direction: column;
+    height: auto  ;
+    width: auto;
+    .photos{
+      margin-top: 30px;
+    padding: 20px;
+    .bigphoto{
+      img{height: auto;
+        border-radius: 20px;
+        
+      }
+    }
+   
+    }
+    .infobox{
+      width: 100%;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid;
+    }
+  }
+}

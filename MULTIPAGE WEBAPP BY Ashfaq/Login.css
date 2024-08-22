@@ -1,0 +1,129 @@
+@import "header.css";
+@import "footer.css";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+}
+
+.mainLogin {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  position: relative;
+  top: 117px;
+  margin-bottom: 170px;
+  height: 100vh;
+  width: 100%;
+  background: url(image/log\ in\ image.jpg) no-repeat center center/cover;
+}
+.mainLogin .LoginDetails {
+  background-color: transparent;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 500px;
+  height: 500px;
+  border-radius: 50px;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  margin-right: 150px;
+}
+.mainLogin .LoginDetails h2 {
+  margin: 20px;
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+.mainLogin .LoginDetails form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+.mainLogin .LoginDetails form .name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.mainLogin .LoginDetails form .name .E-mail {
+  display: flex;
+  flex-direction: column;
+}
+.mainLogin .LoginDetails form .name .E-mail input {
+  height: 40px;
+  width: 300px;
+  border-radius: 30px;
+  border: 2px solid grey;
+}
+.mainLogin .LoginDetails form .Password {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+}
+.mainLogin .LoginDetails form .Password input {
+  height: 40px;
+  width: 609px;
+}
+.mainLogin .LoginDetails form .Password input {
+  height: 40px;
+  width: 300px;
+  border-radius: 30px;
+  border: 2px solid grey;
+}
+.mainLogin .LoginDetails form .checkbox {
+  width: 300px;
+}
+.mainLogin .LoginDetails form .signin {
+  height: 40px;
+  width: 100px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+}
+.mainLogin .LoginDetails form .signin a {
+  text-decoration: none;
+  color: white;
+}
+.mainLogin .LoginDetails form .forgot a {
+  text-decoration: none;
+  color: rgb(215, 199, 199);
+}
+.mainLogin .LoginDetails form .forgot .donthaveacc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .mainLogin {
+    background: none;
+  }
+}
+@media screen and (max-width: 426px) {
+  .mainLogin {
+    top: 0px;
+    margin-bottom: 0px;
+  }
+  .mainLogin .LoginDetails {
+    margin-right: 0px;
+    width: auto;
+    height: auto;
+    border: 2px solid black;
+    margin-right: 40px;
+    padding: 20px;
+  }
+}/*# sourceMappingURL=Login.css.map */

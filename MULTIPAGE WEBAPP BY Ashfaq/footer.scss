@@ -1,0 +1,219 @@
+@import "variables";
+@import "mixing";
+
+* {
+  @include defaultcss();
+}
+
+//SECTION-FOOTER
+/* ---------------- footer -----------------*/
+.footer_main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 100px;
+  color: $backgroundcolor;
+  background-color: #212121;
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+  width: 100%;
+  height: 510px;
+  width: 100%;
+
+  //   main vartical -1
+  .main_vertical-1 {
+    margin-bottom: 3rem;
+    color: $backgroundcolor;
+
+    max-width: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 30px;
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: $heading-color;
+      font-weight: 700;
+      span {
+        color: $backgroundcolor;
+      }
+    }
+    a {
+      color: $heading-color;
+      text-decoration: none;
+    }
+    p {
+      margin-top: 2px;
+      margin-bottom: 1rem;
+      color: rgba(255, 255, 255, 0.5);
+      text-align: justify;
+    }
+    h6 {
+      letter-spacing: 5px;
+      font-size: 1rem;
+      color: #fff;
+      text-transform: uppercase;
+
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+    .icons-social {
+      display: flex;
+      justify-content: flex-start;
+      gap: 7px;
+      margin-left: -5px;
+      a {
+        cursor: pointer;
+        width: 36px;
+        height: 36px;
+        margin-left: 0.5rem;
+        color: #7ab730;
+        border: 1px solid #77ab38;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  //   main-vartical -2.
+  .main_vertical-common {
+    h5 {
+      color: #fff;
+      font-size: 22px;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-weight: 550;
+      margin-bottom: 1.7rem;
+      line-height: 1.22;
+    }
+    .flex_column {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      a {
+        color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 10px;
+        text-decoration: none;
+        &:hover {
+          color: #fff;
+        }
+        i {
+          margin-right: 7px;
+          font-weight: 890;
+          &:hover {
+            color: #7ab730;
+          }
+        }
+      }
+    }
+  }
+
+  // main-vartical-last
+  .main-vartical-last {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+  }
+  h5 {
+    color: #fff;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 550;
+    margin-bottom: 1.7rem;
+    line-height: 1.22;
+  }
+}
+
+// newsletter
+.newsletter {
+  margin-top: 20px;
+  margin-bottom: 0px;
+  height: 300px;
+  width: 100%;
+  background-color: $footercolor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h2 {
+    font-size: 26px;
+    padding-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+  }
+  p {
+    font-size: 16px;
+    padding-bottom: 20px;
+  }
+  .subscribe-email {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    input {
+      height: 35px;
+      width: 200px;
+      padding: 20px;
+    }
+    .subscribeButton {
+      height: 44px;
+      width: 110px;
+      text-transform: uppercase;
+      background-color: black;
+      color: $backgroundcolor;
+    }
+  }
+}
+.copyright{
+  background-color: #212121;
+  color:wheat;
+  
+  padding: 20px;
+  .wrapper{
+    display: flex;
+  justify-content: space-around;
+
+   
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer_main {
+    height: auto;
+    width: auto;
+    flex-direction: column;
+    align-items: baseline;
+    .main_vertical-1 {
+      max-width: none;
+      padding-left: 0px;
+      a {
+        h1 {
+          width: auto;
+          height: auto;
+          display: flex;
+          gap: 8px;
+        }
+      }
+      p {
+        width: 368px;
+        text-align: justify;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:426px) {
+  .newsletter{
+    h2{
+      font-size: 15px;
+    }
+  }
+}

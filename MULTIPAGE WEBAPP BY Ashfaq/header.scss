@@ -1,0 +1,240 @@
+//mixings
+@import "variables";
+@import "mixing";
+
+* {
+  @include defaultcss();
+}
+
+
+//hamburger
+#hamburger {
+  display: none;
+}
+#click {
+  display: none;
+}
+
+// --------marque tag
+
+.topheader {
+  position:fixed;
+  z-index: 33;
+  
+  background-color: #fff;
+  @include flexprop();
+  marquee {
+   
+    @include flexprop();
+  
+  }
+
+  .track {
+    @include flexprop();
+    gap: 10px;
+    margin: 2px;
+    color: #fff;
+
+    .orders {
+      @include flexprop();
+      @include marquebuttons();
+      &:hover {
+        border: 1px solid black;
+        background-color: white;
+        color: black;
+      }
+    }
+    .ecoupons {
+      @include flexprop();
+      @include marquebuttons();
+      margin-right: 20px;
+      &:hover {
+        border: 1px solid black;
+        background-color: white;
+        color: black;
+      }
+    }
+  }
+}
+.h-main {
+  position:fixed;
+  z-index: 33;
+  top: 34px;
+  width: 100%;
+  height: 80px;
+ 
+  @include flexprop();
+
+  justify-content: space-between;
+  // background-color: $backgroundcolor;
+  box-shadow: $boxshado;
+  backdrop-filter: blur(25px);
+
+  .logo {
+    font-size: larger;
+    font-weight: 900;
+    color: #212121;
+    margin-left: 40px;
+    cursor: pointer;
+    h1 {
+      a {
+        text-decoration: none;
+        color: #212121;
+
+        span {
+          color: $heading-color;
+        }
+      }
+    }
+  }
+  nav {
+    
+    ul {
+      display: flex;
+      list-style: none;
+      font-weight: bold;
+      font-size: large;
+      gap: 20px;
+      li{
+        a {
+          text-decoration: none;
+          color: #c51a1a;
+          font-weight: 300;
+          text-transform: uppercase;
+          // letter-spacing: 2px;
+          &:hover {
+            color: $heading-color;
+          }
+  
+        }
+       
+      }
+    }
+     
+    
+  }
+  .icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 500px;
+    height: 40px;
+    // border: 1px solid black;
+    .search{
+     
+      input{
+        height: 30px;
+        width: 260px;
+        border: none;
+        padding: 5px;
+         border: 1px solid black;
+        border-radius: 4px;
+       
+
+      }
+      i{
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+        margin-left:-30px;
+      }
+
+    }
+    .user-cart{
+    //  border: 1px solid black;
+     height: 30px;
+     width: 100px;
+     display:flex;
+     align-items: center;
+     justify-content: center;
+     gap: 30px;
+     a{
+      i{
+         color: black;
+        font-size: 18px;
+        &:hover{
+          color: $heading-color;
+        }
+      }
+     }
+    }
+
+    
+    
+    
+  }
+}
+
+@media screen and (max-width: 768px){
+  .topheader{
+    width: auto;
+    
+  }
+  
+  
+  .icons {
+    .search {
+      display: none;
+    }
+    .cart {
+      display: none;
+    }
+  }
+ //---- hamburger scss
+  #hamburger {
+    margin-right: 20px;
+    display: block;
+  }
+
+  #click:checked ~ .h-main nav ul {
+    display: block;
+  }
+  .h-main {
+    nav {
+     
+      ul {
+        flex-direction: column;
+        
+        position: absolute;
+        left: 0px;
+        top: 78px;
+
+        width: 100%;
+        background-color: aliceblue;
+        display: none;
+
+      }
+
+    }
+    .icons{
+      gap: 40px;
+      justify-content:end;
+      width: auto;
+      height: auto;
+    }
+  }
+
+}
+
+@media screen and (max-width:426px) {
+  .topheader
+  {
+    height: auto;
+    width: auto;
+    .track{
+      .ecoupons{
+        display: none;
+      }
+    }
+  }
+  .h-main{
+    height: auto;
+    .logo{
+      h1{
+        font-size: 25px;
+      }
+    }
+    
+
+  }
+}

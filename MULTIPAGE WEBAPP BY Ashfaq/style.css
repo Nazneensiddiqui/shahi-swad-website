@@ -1,0 +1,307 @@
+@import "header.css";
+@import "footer.css";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+}
+
+.hero {
+  background: url(ladddo\ image.webp) no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.hero .hero-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.hero .hero-text h2 {
+  font-size: 46px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.btn {
+  margin-top: 10px;
+  padding: 8px;
+  background-color: #fff;
+  border: none;
+  border-radius: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid wheat;
+}
+
+.btn a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background-color: transparent;
+  border: 1px solid wheat;
+}
+
+.first-section {
+  height: 1069px;
+}
+.first-section h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-top: 20px;
+  padding: 20px;
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  color: rgb(122, 182, 48);
+  text-transform: capitalize;
+}
+.first-section .fs-cover {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: auto;
+  width: 100%;
+  background-color: #ffe298;
+}
+.first-section .fs-cover .image {
+  display: flex;
+  flex-direction: column;
+}
+.first-section .fs-cover .image img {
+  height: 400px;
+  width: 450px;
+  transition: all 4s ease;
+}
+.first-section .fs-cover .image img:hover {
+  transform: scale(0.8);
+  overflow: scroll;
+}
+.first-section .fs-cover .image a {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  text-transform: capitalize;
+  font-weight: 700;
+  margin: 20px;
+}
+
+.second-section {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  width: 100%;
+}
+.second-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  text-align: center;
+  color: rgb(122, 182, 48);
+}
+.second-section .s-cover {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  margin: 14px;
+}
+.second-section .s-cover .image {
+  height: 560px;
+  width: 300px;
+  background-color: #ffe298;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.second-section .s-cover .image img {
+  height: 500px;
+  width: 300px;
+}
+.second-section .s-cover .image:hover {
+  padding: 10px;
+  cursor: pointer;
+}
+.second-section .s-cover .image a {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  text-transform: capitalize;
+  font-weight: 700;
+  margin: 20px;
+}
+
+.third-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  height: 500px;
+  width: 100%;
+  gap: 10px;
+}
+.third-section .image-1 {
+  background: url(s-02\ legacy.webp) no-repeat center center/cover;
+  height: 100%;
+  width: 50%;
+}
+.third-section .image-1 .text-1 {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  margin-top: 150px;
+  margin-left: 50px;
+}
+.third-section .image-1 .text-1 h3 {
+  letter-spacing: 5px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.third-section .image-1 .text-1 h1 {
+  font-size: 40px;
+  letter-spacing: 5px;
+}
+.third-section .L-btn {
+  background-color: white;
+  height: 50px;
+  width: 150px;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border: 1px solid green;
+}
+.third-section .L-btn:hover {
+  border: 1px solid black;
+  background-color: transparent;
+  cursor: pointer;
+}
+.third-section .L-btn a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+}
+.third-section .image-2 {
+  background: url(s-03\ rakhi.webp) no-repeat center center/cover;
+  height: 100%;
+  width: 50%;
+}
+.third-section .image-2 .text-2 {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  margin-top: 150px;
+  margin-left: 50px;
+}
+.third-section .image-2 .text-2 h3 {
+  letter-spacing: 5px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.third-section .image-2 .text-2 h1 {
+  font-size: 40px;
+  letter-spacing: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    width: auto;
+  }
+  .first-section {
+    height: auto;
+    width: auto;
+  }
+  .first-section .fs-cover {
+    grid-template-columns: 1fr 1fr;
+    width: auto;
+  }
+  .first-section .fs-cover .image img {
+    height: 350px;
+    width: 350px;
+  }
+  .second-section {
+    height: auto;
+    width: auto;
+    margin-top: 70px;
+  }
+  .second-section .s-cover {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    margin-top: 50px;
+  }
+  .third-section {
+    width: auto;
+    height: auto;
+    margin: 20px;
+  }
+}
+@media screen and (max-width: 426px) {
+  .hero {
+    width: auto;
+  }
+  .hero .hero-text h2 {
+    font-size: 25px;
+  }
+  .first-section h2 {
+    font-size: 18px;
+  }
+  .first-section .fs-cover {
+    grid-template-columns: 1fr;
+    width: auto;
+  }
+  .first-section .fs-cover .image {
+    margin-top: 20px;
+  }
+  .second-section .s-cover {
+    grid-template-columns: 1fr;
+  }
+  .third-section {
+    flex-direction: column;
+    width: auto;
+    height: auto;
+  }
+  .third-section .image-1 {
+    width: 390px;
+    height: 390px;
+  }
+  .third-section .image-1 .text-1 h3 {
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .third-section .image-1 .text-1 h1 {
+    font-size: 20px;
+  }
+  .third-section .image-1 .text-1 .L-btn {
+    height: 49px;
+    width: 114px;
+  }
+  .third-section .image-2 {
+    width: 390px;
+    height: 390px;
+  }
+  .third-section .image-2 .text-2 h3 {
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .third-section .image-2 .text-2 h1 {
+    font-size: 20px;
+  }
+  .third-section .image-2 .text-2 .L-btn {
+    height: 49px;
+    width: 114px;
+  }
+  .newsletter h2 {
+    font-size: 15px;
+  }
+}/*# sourceMappingURL=style.css.map */

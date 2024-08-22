@@ -1,0 +1,106 @@
+@import "variables";
+@import "mixing";
+@import "header.css";
+@import "footer.css";
+
+* {
+  @include defaultcss();
+}
+.orderconfirmed {
+  position: relative;
+  top: 200px;
+  margin-bottom: 300px;
+  height: 500px;
+  width: 100%;
+  background-color:aquamarine;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url(/image/orderconfirmed.jpg) no-repeat center center/cover;
+  .cover{
+    height: 400px;
+    width: 700px;
+    border-radius: 50px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    gap: 20px;
+    color: white;
+    border: 2px solid rgb(202, 173, 173);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+
+    .thankyou{
+        width: 150px;
+        height: 50px;
+        background-color:$heading-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 30px;
+        border: 2px solid white;
+        a{
+            text-decoration: none;
+            color:black;
+        }
+        &:hover{
+            background-color: 
+            white;
+            cursor: pointer;
+            border-color: black;
+
+            a{
+                color:black;
+            }
+        }
+    }
+  }
+}
+
+.instagram {
+  margin: 30px;
+
+  @include flexprop();
+  flex-direction: column;
+  h3 {
+    text-align: center;
+
+    a {
+      color: black;
+      text-decoration: none;
+    }
+  }
+}
+
+@media screen and (max-width:768px) {
+    .orderconfirmed{
+     
+      width: auto;
+    height: auto;
+    padding: 20px;
+   
+    }
+  
+}
+
+@media screen and (max-width:426px) {
+
+  .orderconfirmed{
+    width: auto;
+    height: auto;
+    padding: 10px;
+    .cover{
+      width: auto;
+      height: auto;
+      padding: 30px;
+      h1{
+        font-size: larger;
+      }
+
+    }
+  }
+}
